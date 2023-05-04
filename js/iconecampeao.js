@@ -80,7 +80,8 @@ class icone extends HTMLElement {
     component() {
         const iconChampion = document.createElement('div')
         iconChampion.classList.add('icon__champion')
-
+        
+        
         const imageChampion = document.createElement('img')
         imageChampion.classList.add('image__icon__champion')
         imageChampion.src = this.imageIconChampion

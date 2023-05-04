@@ -5,6 +5,11 @@
     font-family: 'Kanit', sans-serif;
 }
 
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
 body {
     background-color: #0A0A0D;
     height: 100vh;
@@ -12,4 +17,53 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;   
+   
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.container {
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    gap: 6%;
+    padding: 20px;
+    overflow-y: auto;
+    align-items: center;
+    background: rgba(27, 27, 34, 0.5);
+    border: 1px solid #664C1C;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+.titulo__campeoes {
+    display: flex;
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.titulo__campeoes h1 {
+    color: white;
+}
+
+.right__accessory {
+    width: 100px;
+    height: 10px;
+}
+
+.left__accessory {
+    width: 100px;
+    height: 10px;
 }

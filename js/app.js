@@ -23,8 +23,6 @@ const cardsChampions = await pegarListaCardsApi()
 
 const criarIconsChampions = (card) => {
 
-    
-
     const linkCard = document.createElement('a')
     linkCard.href = '/champion?=' + card[1].name
 
@@ -34,6 +32,7 @@ const criarIconsChampions = (card) => {
         route()
         window.localStorage.setItem('campeao', card[1].id)
     })
+
     
     const icon__champion =  document.createElement('icons-champions')
     icon__champion.nomeIconChampion = card[1].name

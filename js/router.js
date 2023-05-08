@@ -23,6 +23,7 @@ const routes = {
 }
 
 const route = async () => {
+    console.log(window.localStorage.getItem('path'))
     window.event.preventDefault()
     window.history.pushState({}, "", window.localStorage.getItem('path'))
     

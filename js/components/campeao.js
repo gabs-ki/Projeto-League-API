@@ -1,8 +1,6 @@
 'use strict'
 
-
-
-
+import '../router.js'
 
 class campeao extends HTMLElement {
     constructor() {
@@ -15,6 +13,9 @@ class campeao extends HTMLElement {
         this.classeCampeao = "null"
         this.iconeClasseCampeao = "null"
         this.imageCampeao = null
+        this.classeTitulo = "Função"
+        this.leagueUniverso = `https://universe.leagueoflegends.com/pt_BR/`
+        this.imageUniverso = `./img/leagueUniverse.png`
         this.imageIconeCampeao = null
     }
 
@@ -90,7 +91,8 @@ class campeao extends HTMLElement {
             }
 
             .container__titulo {
-                height: 100px;
+                height: 100%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -100,8 +102,46 @@ class campeao extends HTMLElement {
             }
 
             .container__classe {
-                
+                background-color: #0A0A0D;
+                background: rgba(20, 20, 27, 0.5);
+                border: 1px solid #664C1C;
+                backdrop-filter: blur(2px);
+                height: 83px;
+                width: 242px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 z-index: 1;
+            }
+
+            
+
+            .icone__classe {
+                width: 82px;
+                height: 82px;
+                background: rgba(20, 20, 27, 0.5);
+                border: 1px solid #664C1C;
+                backdrop-filter: blur(2px);
+            }
+
+            .classe__campeao {
+                height: 24px;
+                color: #F5DAA6;
+                font-weight: 300;
+                font-size: 1rem;
+                letter-spacing: 0.05em;
+                position: absolute;
+                top: 25%;
+            }
+
+            .classe__titulo {
+                background: linear-gradient(180deg, #A68749 0%, #574121 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                position: absolute;
+                top: -1%;
             }
 
             .conteudo__descricao {
@@ -116,6 +156,7 @@ class campeao extends HTMLElement {
             }
 
             .descricao__campeao {
+                
                 width: 65%;
                 font-family: 'Kanit';
                 font-weight: 400;
@@ -124,62 +165,10 @@ class campeao extends HTMLElement {
                 z-index: 1;
             }
 
-            .navegador__posterior {
-                display: flex;
-                align-items: start;
-                justify-content: space-evenly;
-                top: 104%;
-                position: absolute;
-                background-color: #664C1C;
-                height: 100px;
-                width: 95%;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-            }
-
-            .icon {
-                position: relative;
-                top: -68%;
-                color: #DBBD77;
-                background: rgba(29, 29, 35, 0.8);
-                border: 1px solid #916E2D;
-                border-radius: 10px;
-                width: 50px;
-                height: 50px;
-                padding: 13px; 
-                cursor: pointer;
-            }
+            
 
             .voltar {
                 transform: scaleX(-1);
-            }
-
-            .moldura__campeao {
-                position: relative;
-                top: -50%;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                width: 5vw;
-                height: 12vh;
-                cursor: pointer;
-            }
-
-            .icone__campeao {
-                position: absolute;
-                top: -42%;
-                width: 10vw;
-                height: 22vh;
-                border-radius: 50%;
-                transform: scale(0.5);
-            }
-
-            .icone__moldura {
-                position: absolute;
-                top: -12%;
-                width: 6.5vw;
-                height: 14.7vh;
-                z-index: 1;
             }
 
             .icone__interno {
@@ -187,6 +176,42 @@ class campeao extends HTMLElement {
                 width: 5.5vw;
                 height: 12vh;
             }
+
+           
+
+            .image__universo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .universe__info {
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                position: relative;
+            }
+
+
+            
+            @media(max-width: 400px) {
+                .descricao__campeao {
+                    font-size: 0.5rem;
+                }
+            }
+
+            @media(max-width: 500px) {
+                .descricao__campeao {
+                    font-size: 0.5rem;
+                }
+            }
+
+            @media(max-width: 1500px) {
+                .descricao__campeao {
+                    font-size: 0.8rem;
+                }
+            }
+
         `
         
         return css
@@ -195,6 +220,7 @@ class campeao extends HTMLElement {
     component() {
         const containerCampeao = document.createElement('div')
         containerCampeao.classList.add('container__campeao')
+        containerCampeao.id = 'teste'
 
         const imageCampeao = document.createElement('img')
         imageCampeao.src = this.imageCampeao
@@ -220,22 +246,36 @@ class campeao extends HTMLElement {
 
         //Div da classe
 
-        
-        const classeCampeao = document.createElement('p')
-        classeCampeao.textContent = this.classeCampeao
-        classeCampeao.classList.add('classe__campeao')
-
+        const containerUniverseInfo = document.createElement('div')
+        containerUniverseInfo.classList.add('universe__info')
 
         const iconeClasseCampeao = document.createElement('img')
         iconeClasseCampeao.src = this.iconeClasseCampeao
         iconeClasseCampeao.classList.add('icone__classe')
 
+        const classeTitulo = document.createElement('p')
+        classeTitulo.textContent = this.classeTitulo
+        classeTitulo.classList.add('classe__titulo')
+
+        const classeCampeao = document.createElement('p')
+        classeCampeao.textContent = this.classeCampeao
+        classeCampeao.classList.add('classe__campeao')
+
+        const containerTitulo = document.createElement('div')
+        containerTitulo.classList.add('container__titulo')
+
+        containerTitulo.append (
+            classeTitulo,
+            classeCampeao
+        )
+
+
         const containerClasse = document.createElement('div')
         containerClasse.classList.add('container__classe')
 
         containerClasse.append (
-            classeCampeao,
-            iconeClasseCampeao
+            iconeClasseCampeao,
+            containerTitulo
         )
 
         //Descricao do Campeao
@@ -246,68 +286,51 @@ class campeao extends HTMLElement {
 
         //
 
+        const iconeUniverso = document.createElement('a')
+        iconeUniverso.classList.add('icone__universo')
+        iconeUniverso.href = this.leagueUniverso
+
+        const imageUniverso = document.createElement('img')
+        imageUniverso.classList.add('image__universo')
+        imageUniverso.src = this.imageUniverso
+
+        iconeUniverso.append (
+            imageUniverso
+        )
+        
+
+        // Container com a classe a descrição e o icone do universo
+
         const conteudoDescricao = document.createElement('div')
         conteudoDescricao.classList.add('conteudo__descricao')
 
         //
 
-        const navegadorPosterior = document.createElement('div')
-        navegadorPosterior.classList.add('navegador__posterior')
-
-        const iconeVoltar = document.createElement('ion-icon')
-        iconeVoltar.setAttribute('name','arrow-redo')
-        iconeVoltar.classList.add('icon')
-        iconeVoltar.classList.add('voltar')
-        iconeVoltar.id = 'Voltar'
-
-        const iconeMenu = document.createElement('ion-icon')
-        iconeMenu.setAttribute('name','menu-outline')
-        iconeMenu.classList.add('icon')
+        
+        
 
         //
-        const molduraCampeao = document.createElement('div')
-        molduraCampeao.classList.add('moldura__campeao')
+       
 
-        const iconeCampeao = document.createElement('img')
-        iconeCampeao.src = this.imageIconeCampeao
-        iconeCampeao.classList.add('icone__campeao')
-
-
-        const iconeMoldura = document.createElement('img')
-        iconeMoldura.src = `./img/champAccessory.png`
-        iconeMoldura.classList.add('icone__moldura')
-
-        const iconeMolduraInterna = document.createElement('img')
-        iconeMolduraInterna.classList.add('icone__interno')
-        iconeMolduraInterna.src = `./img/ab.png`
-        
-        molduraCampeao.append (
-            iconeCampeao,
-            iconeMoldura,
-            iconeMolduraInterna
-        )
-
-
-        navegadorPosterior.append (
-            iconeVoltar,
-            molduraCampeao,
-            iconeMenu
+        containerUniverseInfo.append (
+            containerClasse,
+            iconeUniverso
         )
 
         conteudoDescricao.append (
             descricaoCampeao,
-            containerClasse
+            containerUniverseInfo
         )
+
+        
 
         containerCampeao.append (
             imageCampeao,
             tituloCampeao,
-            conteudoDescricao,
-            navegadorPosterior
+            conteudoDescricao
         )
 
         return containerCampeao
     }
 }
-
 customElements.define('content-champion', campeao)

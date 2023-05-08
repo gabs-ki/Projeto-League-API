@@ -5,6 +5,8 @@
     font-family: 'Kanit', sans-serif;
 }
 
+
+
 a {
     list-style: none;
     text-decoration: none;
@@ -30,7 +32,7 @@ main {
 
 .container {
     width: 60vw;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     gap: 6%;
     padding: 20px;
@@ -43,7 +45,13 @@ main {
     flex-wrap: wrap;
 }
 
-
+.wallpaper__fundo {
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    height: 90vh;
+    filter: blur(5px) saturate(0) opacity(4%);
+}
 
 .titulo__campeoes {
     display: flex;
@@ -66,4 +74,12 @@ main {
 .left__accessory {
     width: 100px;
     height: 10px;
+    top: 80%;
 }
+
+/* .teste {
+    background-color: #664C1C;
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+} */

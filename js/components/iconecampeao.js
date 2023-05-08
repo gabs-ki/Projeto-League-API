@@ -29,24 +29,23 @@ class icone extends HTMLElement {
             .icon__champion {
                 display: flex;
                 flex-direction: column;
-                height: 130px;
-                width: 73px;
+                height: 135px;
+                width: 120px;
                 align-items: center;
                 cursor: pointer;
-                transition: all 0.5s;
+                transition: all 0.6s;
             }
 
             .icon__champion:hover {
                 background-color: rgba(42, 42, 53, 0.5);
-                transform: scale(1.2);
-                height: 115px;
-                width: 130%;
+                transform: scale(1.3);
+                justify-content: start;
                 border: 2px solid #664C1C;
                 border-radius: 7px;
             }
             
             .icon__champion:hover .image__frame__icon__champion {
-                transform: scale(1.05);
+                transform: scale(1.07);
             }
 
             .icon__champion:hover p {

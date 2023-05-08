@@ -28,6 +28,8 @@ class rodape extends HTMLElement {
         const css = document.createElement('style')
         css.textContent = `
             .footer__rodape {
+                position: relative;
+                top: 55%;
                 width: 99vw;
                 height: 224px;
                 background-color: rgb(38, 38, 51, 0.5);

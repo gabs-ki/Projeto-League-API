@@ -1,31 +1,49 @@
 'use strict'
 
+import { carregarCampeoes } from "./campeoes.js"
+import { carregarClasses } from "./classes.js"
+import { pegarCampeaoApi } from "./leagueApi.js"
+
+
+
 
 const routes = {
-    '/'         : "/pages/home.js",
-    '/champion' : "/pages/champion.js",
-    '/azul'     : "/pages/azul.js",
+    '/'      : {
+        html: "/pages/home.html",
+        js: ""
+    } ,
+    '/class' : {
+        html: "/pages/class.html",
+        js: carregarClasses
+    } ,
+    '/champion' : {
+        html: "/pages/champion.html",
+        js: carregarCampeoes
+    } 
 }
 
-const route = () => {
+const route = async () => {
     window.event.preventDefault()
     window.history.pushState({}, "", window.localStorage.getItem('path'))
-    console.log(window.event.target.href)
-    handleLocation()
+    
+    await handleLocation()
 }
 
 const handleLocation = async () => {
-    
     const path = window.location.pathname
-   
-    const route = routes[path]
+    const route = routes[path].html
+    const response = await fetch(route)
+    const html = await response.text()
 
-    const {page} = await import (route)
-   
+    document.getElementById('root').innerHTML = html
 
-    document.getElementById('root').replaceChildren( await page() ) 
+    const campeaoApi = await pegarCampeaoApi(window.localStorage.getItem('campeao'))
+    const campeao = Object.entries(campeaoApi.data)
+
+    routes[path].js(window.localStorage.getItem('campeao'), campeao)
 }
 
 window.onpopstate = handleLocation
 window.route = route
+
 

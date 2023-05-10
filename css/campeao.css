@@ -4,9 +4,103 @@
     justify-content: space-evenly;
     background-color: #664C1C;
     height: 100px;
-    width: 95%;
+    width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    position: absolute;
+}
+
+.navegacao__posterior {
+    position: relative;
+    height: 60px;
+}
+
+.navegador__superior__splash {
+    width: 68vw;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 70px;
+    background-color: #664C1C;
+}
+
+.container__botao__superior {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+
+.botao__superior {
+   height: 50px;
+   width: 50px;
+   color: #C28F2C;
+}
+
+.container__icone__botao__superior {
+    background-color: #27272E;
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 25%;
+    border-radius: 50%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tela__splash__art {
+    position: absolute;
+    top: 13%;
+    left: 13%;
+    height: 85%;
+    width: 75vw;
+    display: initial;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0a0a0de5;
+    
+   
+}
+
+.tela__splash__art__removida {
+    position: absolute;
+    top: 13%;
+    left: 13%;
+    height: 75vh;
+    width: 75vw;
+    display: none;
+    background: rgba(10, 10, 13, 0.5);
+    
+}
+
+.container__splash__campeao {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moldura__splash__campeao {
+    position: absolute;
+    z-index: 2;
+    height: 76%;
+    top: 6%;
+}
+
+.image__splash__campeao {
+    position: absolute;
+    top: 5%;
+    height: 79%;
+    width: 75%;
 }
 
 .moldura__campeao {
@@ -18,7 +112,13 @@
     width: 5vw;
     height: 12vh;
     cursor: pointer;
+    transition: 0.2s;
 }
+
+.moldura__campeao:hover {
+  transform: scale(1.1, 1.1);
+}
+
 
 .icone__campeao {
     position: absolute;
@@ -37,18 +137,27 @@
     z-index: 1;
 }
 
-.icone__universo {
-    width: 83px;
-    height: 83px;
-    background: rgba(20, 20, 27, 0.5);
-    border: 1px solid #664C1C;
-    backdrop-filter: blur(2px);
+.titulo__splash__campeao {
+    position: absolute;
+    z-index: 100;
+    top: 70%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 80%;
+    align-items: center;
+}
+
+.nome__splash__campeao {
+    color: #CFA75A;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.sub__nome__splash__campeao {
+    color: #F5DAA6;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1rem;
 }
 
 .icon {

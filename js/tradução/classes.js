@@ -1,21 +1,22 @@
 export const linguas = {
     "pt-BR" : {
         classes: [
-        "Assassinos",
-        "Atiradores",
-        "Suportes",
-        "Tanques",
-        "Magos",
-        "Lutadores"
-    ]},
+        {"Assassin": "Assassino"},
+        {"Marksman": "Atirador"},
+        {"Support": "Suporte"},
+        {"Tank": "Tanque"},
+        {"Mage": "Mago"},
+        {"Fighter": "Lutador"}
+        ]
+    },
     "en-US" : {
         classes: [
         "Assassin",
         "Marksman",
-        "Supports",
-        "Tanks",
-        "Mages",
-        "Brawers"
+        "Support",
+        "Tank",
+        "Mage",
+        "Fighter"
         ]
     }
     

@@ -53,6 +53,20 @@ class campeao extends HTMLElement {
                 justify-content: space-between;
             }
 
+            .icone__universo {
+                width: 83px;
+                height: 83px;
+                background: #14141b80;
+                border: 1px solid #664C1C;
+                backdrop-filter: blur(2px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 80%;
+            }
+
             .image__campeao {
                 border-radius: 10px;
                 position: absolute;

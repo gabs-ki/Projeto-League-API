@@ -8,7 +8,7 @@ const criarClassChampions = (card) => {
 }
 
 export const carregarClasses = () => {
-    const container = document.getElementById('teste')
+    const container = document.getElementById('classes')
 
     const cards = linguas["pt-BR"].classes
 

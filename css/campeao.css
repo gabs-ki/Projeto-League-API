@@ -23,6 +23,14 @@
     background-color: #664C1C;
 }
 
+.navegador__superior__skill {
+    width: 68vw;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 70px;
+    background-color: #664C1C;
+}
+
 .container__botao__superior {
     height: 100px;
     display: flex;
@@ -55,18 +63,32 @@
 
 .tela__splash__art {
     position: absolute;
-    top: 13%;
-    left: 13%;
-    height: 85%;
+    top: 14%;
+    left: 12.2%;
+    height: 82%;
     width: 75vw;
     display: initial;
     z-index: 10000;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background: #0a0a0de5;
-    
-   
+}
+
+.tela__habilidades {
+    position: absolute;
+    top: 3%;
+    left: 0%;
+    height: 99%;
+    width: 75vw;
+    display: initial;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a0a0de5;
 }
 
 .tela__splash__art__removida {
@@ -170,4 +192,63 @@
     width: 50px;
     height: 50px;
     padding: 13px; 
+}
+
+.navegador__posterior__splash {
+    width: 90%;
+    height: 9%;
+    background-color: #664C1C;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ancora__skin__splash {
+    height: 80px;
+    width: 80px;
+    background-color: #15151BCC;
+    border-radius: 50%;
+    border: 1px solid #7B5710;
+    cursor: pointer;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.ancora__habilidades__splash {
+    height: 80px;
+    width: 80px;
+    background-color: #15151BCC;
+    border-radius: 50%;
+    border: 1px solid #7B5710;
+    cursor: pointer;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.icone__skin__splash {
+    height: 55px;
+    width: 55px;
+}
+
+.icone__habilidades__splash {
+    height: 55px;
+    width: 55px;
+}
+
+.testeB {
+    position: absolute;
+    display: none;
+}
+
+.testeA {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: initial;
 }

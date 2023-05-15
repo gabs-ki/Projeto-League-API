@@ -7,6 +7,7 @@ class classe extends HTMLElement {
         this.shadow = this.attachShadow({mode: 'open'})
         this.nomeClasse = "Classe"
         this.imageClass = null
+        this.setaClass = null
     }
 
     static get observedAttributes() {
@@ -27,9 +28,42 @@ class classe extends HTMLElement {
         css.textContent = `
         
         .container__class {
-            width: 200px;
-            height: 100px;
+            width: 18vw;
+            height: 25vh;
             background-color: #191922;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .titulo__classe {
+            color: #926F2E;
+            font-family: Kanit;
+            font-size: 2rem;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 30px;
+            letter-spacing: 0.4em;
+            text-align: left;
+
+        }
+
+        .container__titulo {
+            display: flex;
+            height: 30%;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 10px;
+        }
+
+        .icone__seta {
+            height: 30px;
+            width: 30px;
+            color: #A47C31;
+
         }
 
         `
@@ -39,7 +73,32 @@ class classe extends HTMLElement {
     component() {
         const containerClass = document.createElement('div')
         containerClass.classList.add('container__class')
-    
+
+        const containerTitulo = document.createElement('div')
+        containerTitulo.classList.add('container__titulo')
+
+        const tituloClasse = document.createElement('p')
+        tituloClasse.classList.add('titulo__classe')
+        tituloClasse.textContent = this.nomeClasse
+
+        const iconeSetaClasse = document.createElement('ion-icon')
+        iconeSetaClasse.classList.add('icone__seta')
+        iconeSetaClasse.setAttribute('name', 'play-forward')
+
+        const imgClasse = document.createElement('img')
+        imgClasse.classList.add('image__classe')
+        imgClasse.src = this.imageClass
+
+        containerTitulo.append(
+            tituloClasse,
+            iconeSetaClasse
+        )
+
+        containerClass.append (
+            containerTitulo,
+            imgClasse
+        )
+
         return containerClass
     }
 

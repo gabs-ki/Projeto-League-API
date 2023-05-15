@@ -80,6 +80,13 @@ class rodape extends HTMLElement {
             .autor {
                 color: white;
             }
+
+            .list__links {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+            }
         `
         return css
     }
@@ -111,6 +118,7 @@ class rodape extends HTMLElement {
         
         //
         const list__links = document.createElement('div')
+        list__links.classList.add('list__links')
 
         const facebook_link = document.createElement('ion-icon')
         facebook_link.setAttribute('name','logo-facebook')

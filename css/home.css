@@ -1,0 +1,56 @@
+
+body {
+    background-color: #0A0A0D;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;   
+    gap: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-evenly;
+    
+}
+
+.home {
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    gap: 6%;
+    padding: 20px;
+    overflow-y: auto;
+    align-items: center;
+    background: rgba(27, 27, 34, 0.5);
+    border: 1px solid #664C1C;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.wallpaper__fundo {
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    height: 90vh;
+    filter: blur(5px) saturate(0) opacity(4%);
+}
+
+.titulo__campeoes {
+    display: flex;
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+.titulo__campeoes h1 {
+    color: white;
+}

@@ -69,17 +69,21 @@ class cabecalho extends HTMLElement {
         const header = document.createElement('header')
         header.classList.add('header__cabecalho')
 
+        const ancoraLogo = document.createElement('a')
+       ancoraLogo.href = `https://www.leagueoflegends.com/pt-br/?utm_source=riotbar&utm_medium=productcard%2Bwww.riotgames.com&utm_campaign=lol&utm_content=lol_keyart01`
+
         const fotoLogo = document.createElement('img')
         fotoLogo.classList.add('logo__image')
         fotoLogo.src = this.logo
 
+        ancoraLogo.append(fotoLogo)
         const fotoSeparador = document.createElement('img')
         fotoSeparador.classList.add('separador__image')
         fotoSeparador.src = this.separador
         
 
         header.append(
-            fotoLogo,
+            ancoraLogo,
             fotoSeparador
         )
 

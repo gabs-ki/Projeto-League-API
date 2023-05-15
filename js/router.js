@@ -1,7 +1,9 @@
 'use strict'
 
 import { carregarCampeoes } from "./campeoes.js"
+import { carregarCampeoesPorClasse } from "./campeoesclass.js"
 import { carregarClasses } from "./classes.js"
+import { carregarItemsHome } from "./home.js"
 import { pegarCampeaoApi } from "./leagueApi.js"
 
 
@@ -10,16 +12,20 @@ import { pegarCampeaoApi } from "./leagueApi.js"
 const routes = {
     '/'      : {
         html: "/pages/home.html",
-        js: ""
+        js: carregarItemsHome
     } ,
-    '/class' : {
-        html: "/pages/class.html",
+    '/classes' : {
+        html: "/pages/classes.html",
         js: carregarClasses
     } ,
     '/champion' : {
         html: "/pages/champion.html",
         js: carregarCampeoes
-    } 
+    } ,
+    '/champions/classe' : {
+        html: "/pages/championclass.html",
+        js: carregarCampeoesPorClasse
+    }
 }
 
 const route = async () => {
@@ -41,7 +47,7 @@ const handleLocation = async () => {
     const campeaoApi = await pegarCampeaoApi(window.localStorage.getItem('campeao'))
     const campeao = Object.entries(campeaoApi.data)
 
-    routes[path].js(window.localStorage.getItem('campeao'), campeao)
+    routes[path].js(window.localStorage.getItem('campeao'), campeao, window.localStorage.getItem('classe'))
 }
 
 window.onpopstate = handleLocation

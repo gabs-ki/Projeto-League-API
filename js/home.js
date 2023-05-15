@@ -23,6 +23,8 @@ const cardsChampions = await pegarListaCardsApi()
 
 const criarIconsChampions = (card) => {
 
+    
+
     const linkCard = document.createElement('a')
     linkCard.href = '/champion?=' + card[1].name
 
@@ -33,7 +35,7 @@ const criarIconsChampions = (card) => {
         window.localStorage.setItem('campeao', card[1].id)
     })
 
-
+    
     const icon__champion =  document.createElement('icons-champions')
     icon__champion.nomeIconChampion = card[1].name
     icon__champion.imageIconChampion = `http://ddragon.leagueoflegends.com/cdn/13.9.1/img/champion/${card[0]}.png`
@@ -46,8 +48,8 @@ const criarIconsChampions = (card) => {
     return linkCard
 }
 
-const carregarItems = async () => {
-    const container = document.getElementById('container')
+export const carregarItemsHome = async () => {
+    const container = document.getElementById('home')
 
     const cards = Object.entries(await cardsChampions.data)
   
@@ -59,4 +61,3 @@ const carregarItems = async () => {
 
 
 
-carregarItems()

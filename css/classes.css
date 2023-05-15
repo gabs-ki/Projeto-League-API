@@ -1,0 +1,11 @@
+
+
+#classes {
+    display: flex;
+    height: 70vh;
+    width: 80vw;
+    flex-wrap: wrap;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+}

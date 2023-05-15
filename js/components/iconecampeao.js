@@ -7,7 +7,7 @@ class icone extends HTMLElement {
         this.shadow = this.attachShadow({mode: 'open'})
         this.nomeIconChampion = "Campeão"
         this.imageIconChampion = `./img/aa.png`
-        this.imageFrameChampion = `./img/ab.png`
+        this.imageFrameChampion = null
     }
 
     static get observedAttributes() {

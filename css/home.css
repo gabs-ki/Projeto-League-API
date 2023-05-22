@@ -52,5 +52,23 @@ main {
 
 
 .titulo__campeoes h1 {
-    color: white;
+    color: #CFA75A;
+}
+
+@media(max-width: 400px) {
+    .home {
+        width: 80vw;
+    }
+} 
+
+@media(max-width: 600px) {
+    .home {
+        width: 80vw;
+    }
+}
+
+@media(max-width: 700px) {
+    .home {
+        width: 90vw;
+    }
 }

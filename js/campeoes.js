@@ -72,8 +72,8 @@ export const carregarCampeoes = async (nome, dados) => {
 
     // Evento para mostrar a splash art do campeão
     molduraCampeao.addEventListener('click', () => {
-        splashChamp.classList.remove('testeB')
-        splashChamp.classList.add('testeA')
+        splashChamp.classList.remove('remover__tela__splash')
+        splashChamp.classList.add('mostrar__tela__splash')
 
 
         splashChamp.replaceChildren(
@@ -119,6 +119,9 @@ export const carregarCampeoes = async (nome, dados) => {
         iconeVoltar
     )
 
+   
+
+
     //Adicionando conteudo no navegador posterior
     navegadorPosterior.append(
         ancoraVoltar,
@@ -137,15 +140,6 @@ export const carregarCampeoes = async (nome, dados) => {
     container.append(
         navegador
     )
-
-    // const linkMenu = document.createElement('a')
-    // linkMenu.style = 'position: absolute;'
-    // linkMenu.href = '/class'
-    // linkMenu.textContent = 'Teste'
-    // linkMenu.addEventListener('click', () => {
-    //     window.localStorage.setItem('path', linkMenu.href)
-    //     route()
-    // })
 
 
     return container
@@ -393,10 +387,7 @@ const gerarTelaSplash = (dados, nome) => {
     )
 
     containerIconeBotaoSuperior.addEventListener('click', () => {
-        const getTelaSplash = document.getElementById('tela__splash__id')
-
-        getTelaSplash.classList.add('testeA')
-        getTelaSplash.classList.add('testeB')
+        
 
         telaSplashArt.classList.remove('tela__splash__art')
         telaSplashArt.classList.add('tela__splash__art__removida')
@@ -541,7 +532,7 @@ const gerarTelaSkin = (dados, nome) => {
     containerIconeBotaoSuperior.addEventListener('click', () => {
         const removerTelaSplash = document.getElementById('tela__splash__art')
         telaSplashArt.classList.remove('tela__habilidades__splash')
-        removerTelaSplash.classList.add('testeB')
+        removerTelaSplash.classList.add('remover__tela__splash')
     })
 
     containerBotaoSuperior.append(

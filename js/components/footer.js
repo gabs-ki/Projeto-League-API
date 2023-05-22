@@ -28,7 +28,7 @@ class rodape extends HTMLElement {
         const css = document.createElement('style')
         css.textContent = `
             .footer__rodape {
-                width: 99vw;
+                width: 98vw;
                 height: 224px;
                 background-color: rgb(38, 38, 51, 0.5);
                 backdrop-filter: blur(2px);
@@ -69,6 +69,12 @@ class rodape extends HTMLElement {
                 height: 25px;
                 width: 20px;
                 color: #937333;
+                cursor: pointer;
+                transition: 250ms;
+            }
+
+            .icon:hover {
+                color: white;
             }
 
             .separador__footer {

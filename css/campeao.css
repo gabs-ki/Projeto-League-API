@@ -8,10 +8,12 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     position: absolute;
+  
 }
 
 .navegacao__posterior {
     position: relative;
+    left: 0;
     height: 60px;
 }
 
@@ -92,14 +94,7 @@
 }
 
 .tela__splash__art__removida {
-    position: absolute;
-    top: 13%;
-    left: 13%;
-    height: 75vh;
-    width: 75vw;
     display: none;
-    background: rgba(10, 10, 13, 0.5);
-    
 }
 
 .container__splash__campeao {
@@ -273,12 +268,12 @@
     background: #0a0a0de5;
 }
 
-.testeB {
+.remover__tela__splash {
     position: absolute;
     display: none;
 }
 
-.testeA {
+.mostrar__tela__splash {
     position: absolute;
     top: -5%;
     left: 0;
@@ -535,4 +530,315 @@
     font-size: 2rem;
     font-weight: 700;
     color: white;
+}
+
+.moldura__mobile {
+    display: none;
+}
+
+
+@media(max-width: 800px) {
+    .icon {
+        top: -45%;
+        width: 30px;
+        height: 30px;
+        
+    }
+
+    .menu {
+        top: -45%;
+        width: 30px;
+        height: 30px;
+        left: 75%;
+    }
+
+    .voltar {
+        top: -45%;
+        width: 30px;
+        height: 30px;
+        left: 10%;
+    }
+
+    .moldura__campeao {
+        top: -26%;
+        width: 20vw;
+        height: 13vh;
+    }
+
+    .icone__campeao {
+        top: -35%;
+        width: 38vw;
+        height: 18vh;
+    }
+
+
+    .icone__moldura {
+        top: -10%;
+        width: 29.5vw;
+        height: 18.7vh;
+    }
+
+    .icone__moldura {
+        top: -25%;
+        width: 25vw;
+        height: 15.7vh;
+    }
+
+    .navegador__posterior {
+        height: 80px;
+        width: 100vw;
+    }
+}
+
+@media(max-width: 600px) {
+    .icon {
+        top: -45%;
+        width: 30px;
+        height: 30px;
+        
+    }
+
+    .menu {
+        top: -45%;
+        width: 30px;
+        height: 30px;
+        left: 75%;
+    }
+
+    .voltar {
+        top: -45%;
+        width: 30px;
+        height: 30px;
+        left: 10%;
+    }
+
+    .moldura__campeao {
+        top: -30%;
+        width: 25vw;
+        height: 10vh;
+    }
+
+    .mostrar__tela__splash {
+        position: absolute;
+        top: -21%;
+        left: 0;
+        width: 100vw;
+        height: 155vh;
+        display: initial;
+    }
+
+    .container__splash__campeao {
+        width: 100vw;
+    }
+
+    .image__splash__campeao {
+        width: 100%;
+        height: 75%;
+        object-fit: fill;
+    }
+
+    .moldura__splash__campeao {
+        display: none;
+    }
+
+    .icone__campeao {
+        top: -54%;
+        width: 45vw;
+        height: 25vh;
+    }
+
+    .icone__moldura {
+        top: -15%;
+        width: 30.5vw;
+        height: 16.7vh;
+    }
+
+    .navegador__posterior {
+        height: 80px;
+        width: 100vw;
+    }
+
+    .tela__splash__art {
+        width: 100vw;
+        left: 0;
+    }
+
+    .navegador__posterior__splash {
+        width: 100vw;
+    }
+
+    .navegador__superior__splash {
+        width: 100vw;
+    }
+
+    .titulo__splash__campeao {
+        top: 85%;
+    }
+
+    .nome__splash__campeao {
+        font-size: 2rem;
+    }
+
+    .sub__nome__splash__campeao {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 800px) {
+    .moldura__campeao {
+        top: -30%;
+        width: 25vw;
+        height: 10vh;
+    }
+
+    .mostrar__tela__splash {
+        position: absolute;
+        top: -21%;
+        left: 0;
+        width: 100vw;
+        height: 152vh;
+        display: initial;
+    }
+
+    .titulo__splash__campeao {
+        top: 85%;
+    }
+
+    .nome__splash__campeao {
+        font-size: 2rem;
+    }
+
+    .sub__nome__splash__campeao {
+        font-size: 1.2rem;
+    }
+
+    .container__splash__campeao {
+        width: 100vw;
+    }
+
+    .image__splash__campeao {
+        width: 100%;
+        height: 75%;
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: 70%;
+    }
+
+    .moldura__splash__campeao {
+        display: none;
+    }
+
+    .tela__splash__art {
+        width: 100vw;
+        left: 0;
+    }
+
+    .navegador__posterior__splash {
+        width: 100vw;
+    }
+
+    .navegador__superior__splash {
+        width: 100vw;
+    }
+
+    .tela__habilidades__splash {
+        width: 100vw;
+    }
+
+    .tela__habilidades {
+        width: 100%;
+    }
+
+    .container__botao__superior {
+        width: 100%;
+    }
+
+    .navegador__superior__skill {
+        width: 100%;
+    }
+
+    .container__skills__campeao {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container__habilidades {
+        display: flex;
+        width: 100%;
+    }
+
+    .lista__habilidades {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container__info__habilidades {
+        width: 100vw;
+        height: 55vh;
+        font-size: 0.9rem;
+        padding: 5px;
+        justify-content: center;
+        max-width: 85vw;
+    }
+
+    .texto__habilidade {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .texto__passiva {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .habilidades {
+        height: 50px;
+        width: 50px;
+    }
+
+    .habilidades img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .passiva {
+        height: 50px;
+        width: 50px;
+    }
+
+    .passiva img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .titulo__pagina__habilidades {
+        left: 10%;
+        top: 13%;
+    }
+
+    .moldura__skin {
+        display: none;
+    }
+
+    .botao__right__skin {
+        left: 85%;
+    }
+
+    .titulo__pagina__skins {
+        left: 30%;
+        width: 100%;
+    }
+
+    .icon_skins_titulo {
+        height: 60px;
+        width: 60px;
+    }
+
+    .container__skins img {
+        width: 70%;
+        left: 15%;
+        object-fit: cover;
+        object-position: 50%;
+    }
 }

@@ -212,11 +212,171 @@ class campeao extends HTMLElement {
                 .descricao__campeao {
                     font-size: 0.5rem;
                 }
+
+                .container__campeao {
+                    width: 100vw;
+                    height: 90vh;
+                }
+
+                .container__titulo {
+                    height: 100%;
+                    width: 100%;
+                    top: -15%;
+                }
+
+                .conteudo__descricao {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    justify-content: space-between;
+                    width: 95%;
+                    height: 100vh;
+                    gap: 10px;
+                    align-items: center;
+                    position: relative;
+                    top: -5%;
+                }
+
+                .universe__info {
+                    width: 60%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    position: relative;
+                    left: -12%;
+                }
+
+                .container__classe {
+                    height: 60px;
+                    width: 230px;
+                }
+
+                .icone__classe {
+                    height: 60px;
+                    width: 70px;
+                }
+
+                .icone__universo {
+                    height: 60px;
+                    width: 70px;
+                    position: absolute;
+                    top: 0%;
+                    left: 107%;
+                }
+
+                .image__universo {
+                    height: 60px;
+                    width: 70px;
+                }
+
+                .sub__campeao {
+                    width: 100vw;
+                }
+
+                .image__campeao {
+                    width: 100vw;
+                }
+
+                .descricao__campeao {
+                    width: 80vw;
+                }
+
             }
 
-            @media(max-width: 500px) {
+            @media(max-width: 600px) {
                 .descricao__campeao {
                     font-size: 0.5rem;
+                }
+
+                .container__campeao {
+                    width: 100vw;
+                    height: 90vh;
+                }
+
+                .container__titulo {
+                    height: 100%;
+                    width: 100%;
+                    top: -15%;
+                }
+
+                .conteudo__descricao {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    justify-content: space-between;
+                    width: 95%;
+                    height: 100vh;
+                    gap: 10px;
+                    align-items: center;
+                    position: relative;
+                    top: -10%;
+                }
+
+                .universe__info {
+                    width: 60%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    position: relative;
+                    left: -12%;
+                }
+
+                .container__classe {
+                    height: 60px;
+                    width: 230px;
+                }
+
+                .icone__classe {
+                    height: 60px;
+                    width: 70px;
+                }
+
+                .icone__universo {
+                    height: 60px;
+                    width: 70px;
+                    position: absolute;
+                    top: 0%;
+                    left: 107%;
+                }
+
+                .image__universo {
+                    height: 60px;
+                    width: 70px;
+                }
+
+                .sub__campeao {
+                    width: 100vw;
+                }
+
+                .image__campeao {
+                    width: 100vw;
+                }
+
+                .descricao__campeao {
+                    width: 80vw;
+                }
+
+                .icon {
+                    top: -45%;
+                    width: 30px;
+                    height: 30px;
+                    padding: 13px;
+                }
+
+                .moldura__campeao {
+                    top: -30%;
+                    width: 25vw;
+                    height: 10vh;
+                }
+
+                .icone__campeao {
+                    top: -54%;
+                    width: 45vw;
+                    height: 25vh;
+                }
+
+                .icone__moldura {
+                    top: -15%;
+                    width: 30.5vw;
+                    height: 16.7vh;
                 }
             }
 

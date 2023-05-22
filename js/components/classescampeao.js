@@ -8,7 +8,7 @@ class classe extends HTMLElement {
         this.nomeClasse = "Classe"
         this.imageClass = null
         this.setaClass = null
-    }
+    } 
 
     static get observedAttributes() {
         return['nomeClasse', 'imageClass']
@@ -63,7 +63,72 @@ class classe extends HTMLElement {
             height: 30px;
             width: 30px;
             color: #A47C31;
+        }
 
+        @media(max-width: 400px) {
+            .container__class {
+                width: 90vw;
+                height: 9vh;
+                justify-content: space-between;
+            }
+
+            .container__titulo {
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+               
+            }
+
+            .titulo__classe {
+                
+                font-size: 1.5rem;
+                font-weight: 300;
+                letter-spacing: 0.2em;
+                text-align: left;
+                padding-left: 5%;
+            }
+
+            .image__classe {
+               display: none;
+            }
+
+            .icone__seta {
+                padding-right: 5%;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .container__class {
+                width: 90vw;
+                height: 9vh;
+                justify-content: space-between;
+            }
+
+            .container__titulo {
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+               
+            }
+
+            .titulo__classe {
+                
+                font-size: 1.5rem;
+                font-weight: 300;
+                letter-spacing: 0.2em;
+                text-align: left;
+                padding-left: 5%;
+            }
+
+            .image__classe {
+               display: none;
+            }
+
+            .icone__seta {
+                padding-right: 5%;
+            }
         }
 
         `

@@ -7,7 +7,7 @@ const listaCampeaoesApi = await pegarListaCardsApi()
 
 const criarIconsChampions = (card) => {
 
-    
+     
   
 
     const linkCard = document.createElement('a')
@@ -47,10 +47,6 @@ export const carregarCampeoesPorClasse = async (nome, dados, classe) => {
             array.push(campeao[0])
 
             const gerarItems = array.map(criarIconsChampions)
-
-            
-            console.log(array)
-            
 
             container.replaceChildren(...gerarItems)
             

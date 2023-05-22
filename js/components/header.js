@@ -33,7 +33,7 @@ class cabecalho extends HTMLElement {
         css.textContent = `
 
         .header__cabecalho {
-            width: 100vw;
+            width: 98vw;
             height: 128px;
             display: flex;
             flex-direction: column;
@@ -59,6 +59,19 @@ class cabecalho extends HTMLElement {
             width: 90vw;
         }
         
+        @media(max-width: 400px) {
+            .separador__image {
+                height: 15px;
+                width: 90vw;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .separador__image {
+                height: 15px;
+                width: 90vw;
+            }
+        }
         
         
         `
